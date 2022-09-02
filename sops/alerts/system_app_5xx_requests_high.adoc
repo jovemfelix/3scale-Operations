@@ -1,23 +1,24 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleSystemApp5XXRequestsHigh
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if the number of `system-app` HTTP 5XX requests is greater than a given threshold
+* Este alerta será acionado se o número de solicitações HTTP 5XX do `system-app` for maior que um determinado limite
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if `system-app` pods might be failing
-* Check if `system-app` pods might not be able to deal with incoming traffic due to high CPU usage
-- You may need to consider scaling horizontally `system-app` deployment
-- You may need to consider increasing `system-app` deployment resources requests/limits
-* Check if system's mysql database (or even system's redis) is having issues
-* Check if the current traffic is normal based on the historical data. An unexpected change in the traffic pattern can be legit, and will require scaling up, but it also can be due to an abnormal or malicious traffic
+* Verifique se os pods `system-app` podem estar falhando
+* Verifique se os pods `system-app` podem não ser capazes de lidar com o tráfego de entrada devido ao alto uso da CPU
+- Pode ser necessário considerar o dimensionamento horizontal do _deploy_  do `system-app`
+- Você pode precisar considerar aumentar as solicitações/limites de recursos do _deploy_  do `system-app`
+* Verifique se o banco de dados mysql `system-mysql` (ou mesmo o redis `system-redis`) está com problemas
+* Verifique se o tráfego atual é normal com base nos dados históricos. Uma mudança inesperada no padrão de tráfego pode ser legítima e exigirá ampliação, mas também pode ser devido a um tráfego anormal ou malicioso 7
 
-== Verification
+== Verificação
 
-* Alert should disappear once the number of `system-app` HTTP 5XX requests is below the threshold
+* O alerta deve desaparecer quando o número de solicitações HTTP 5XX do `system-app` estiver abaixo do limite

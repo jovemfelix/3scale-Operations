@@ -1,23 +1,24 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleApicastLatencyHigh
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if the `apicast-staging`/`apicast-production` **p99** latency is greater than a given threshold
-* Latency metric includes the time the request spent in apicast plus the time it took the upstream to respond
+* Este alerta será acionado se a latência do `apicast-staging`/`apicast-production` **p99** for maior que um determinado limite
+* A métrica de latência inclui o tempo que a solicitação passou no apicast mais o tempo que o upstream levou para responder
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if `apicast-staging`/`apicast-production` pods might not be able to deal with incoming traffic due to high CPU usage
-- You may need to consider scaling horizontally `apicast-staging`/`apicast-production` deployment
-- You may need to consider increasing `apicast-staging`/`apicast-production` deployment resources requests/limits
-* Check if upstream response is taking too much time
-* Check if the current traffic is normal based on the historical data. An unexpected change in the traffic pattern can be legit, and will require scaling up, but it also can be due to an abnormal or malicious traffic
+* Verifique se os pods `apicast-staging`/`apicast-production` podem não ser capazes de lidar com o tráfego de entrada devido ao alto uso da CPU
+- Talvez seja necessário considerar o dimensionamento horizontal do deploy do `apicast-staging`/`apicast-production`
+- Talvez seja necessário considerar aumentar as solicitações/limites de recursos do deploy do `apicast-staging`/`apicast-production`
+* Verifique se a resposta upstream está demorando muito
+* Verifique se o tráfego atual é normal com base nos dados históricos. Uma mudança inesperada no padrão de tráfego pode ser legítima e exigirá ampliação, mas também pode ser devido a um tráfego anormal ou malicioso
 
-== Verification
+== Verificação
 
-* Alert should disappear once the `apicast-staging`/`apicast-production` **p99** latency is below the threshold
+* O alerta deve desaparecer quando a latência do `apicast-staging`/`apicast-production` **p99** estiver abaixo do limite

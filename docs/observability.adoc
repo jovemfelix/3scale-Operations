@@ -1,4 +1,5 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = Observability

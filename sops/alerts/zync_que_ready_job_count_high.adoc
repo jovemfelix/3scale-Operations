@@ -1,23 +1,24 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleZyncQueReadyJobCountHigh
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if the number of `zync-que` **ready** jobs is greater than a given threshold
-* **Ready** jobs are the ones that are enqueued and ready to be executed ASAP (never failed, nor got expired)
+* Este alerta será acionado se o número de _jobs_ `zync-que` **ready** for maior que um determinado limite
+* _Jobs_ **ready** são aqueles que estão enfileirados e prontos para serem executados o mais rápido possível (nunca falharam nem expiraram)
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if `zync-que` pods might be failing and the jobs are not being consumed at all from zync's postgres
-* Check if `zync-que` pods might not be consuming jobs at the required throughput:
-- You may need to consider scaling horizontally `zync-que` deployment
-- You may need to consider increasing `zync-que` deployment resources requests/limits
-* Check if zync's postgres is having issues
+* Verifique se os pods `zync-que` podem estar falhando e os _jobs_ não estão sendo consumidos do postgres do zync
+* Verifique se os pods `zync-que` podem não estar consumindo _jobs_ na taxa de transferência necessária:
+- Você pode precisar considerar dimensionar horizontalmente o _deploy_  do `zync-que`
+- Você pode precisar considerar aumentar as solicitações/limites de recursos do _deploy_ do `zync-que`
+* Verifique se o postgres do zync está com problemas
 
-== Verification
+== Verificação
 
-* Alert should disappear once the number of `zync-que` **ready** jobs is below the threshold
+* O alerta deve desaparecer quando o número de trabalhos `zync-que` **ready** estiver abaixo do limite

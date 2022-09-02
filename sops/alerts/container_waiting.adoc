@@ -1,20 +1,21 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleContainerWaiting
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if a container has been in `waiting` state for longer than 1 hour
+* Este alerta será acionado se um contêiner estiver no estado `waiting` por mais de 1 hora
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if maybe container image registry is not reachable
+* Verifique se talvez o _registry_ de imagem do contêiner não esteja acessível
 
-== Verification
+== Verificação
 
-* Alert should disappear once container is up and running
+* O alerta deve desaparecer quando o contêiner estiver funcionando
 
 

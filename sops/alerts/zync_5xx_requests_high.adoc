@@ -1,22 +1,23 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleZync5XXRequestsHigh
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if the number of `zync` HTTP 5XX requests is greater than a given threshold
+* Este alerta será acionado se o número de solicitações HTTP 5XX `zync` for maior que um determinado limite
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if `zync` pods might be failing
-* Check if `zync` pods might not be able to deal with incoming traffic due to high CPU usage
-- You may need to consider scaling horizontally `zync` deployment
-- You may need to consider increasing `zync` deployment resources requests/limits
-* Check if zync's postgres database is having issues
+* Verifique se os pods `zync` podem estar falhando
+* Verifique se os pods `zync` podem não ser capazes de lidar com o tráfego de entrada devido ao alto uso da CPU
+- Você pode precisar considerar dimensionar horizontalmente do _deploy_  do `zync`
+- Você pode precisar considerar aumentar as solicitações/limites de recursos do _deploy_  `zync`
+* Verifique se o banco de dados postgres do zync está tendo problemas
 
-== Verification
+== Verificação
 
-* Alert should disappear once the number of `zync` HTTP 5XX requests is below the threshold
+* O alerta deve desaparecer quando o número de solicitações HTTP 5XX `zync` estiver abaixo do limite

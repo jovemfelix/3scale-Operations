@@ -1,20 +1,21 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleContainerMemoryHigh
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if the memory usage is being very high
+* Este alerta será acionado se o uso de memória estiver muito alto
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if Memory resources requests/limits are properly set and appropriate to the historical usage data. If the real usage tends to surpass the requested threshold, you may need to increase the container resources
-* Check if maybe you need to scale horizontally the associated deployment with more pods (if possible) to distribute the load
-- Some deployments **cannot** be scaled horizontally: `backend-cron` and any db (`backend-redis`,`system-redis`, `system-mysql`, `system-memcache`, `system-sphinx`, `zync-database`)
+* Verifique se as solicitações/limites de recursos de memória estão devidamente definidos e adequados aos dados históricos de uso. Se o uso real tende a ultrapassar o limite solicitado, pode ser necessário aumentar os recursos do contêiner
+* Verifique se talvez você precise dimensionar horizontalmente o _deploy_ associado a mais pods (se possível) para distribuir a carga
+- #Alguns _deploys_  **não** podem ser dimensionadas horizontalmente#: `backend-cron` e qualquer banco de dados (`backend-redis`,`system-redis`, `system-mysql`, `system-memcache`, `system-sphinx` , `banco de dados zync`)
 
-== Verification
+== Verificação
 
-* Alert should disappear once Memory usage decreases below the threshold
+* O alerta deve desaparecer quando o uso da memória diminuir abaixo do limite

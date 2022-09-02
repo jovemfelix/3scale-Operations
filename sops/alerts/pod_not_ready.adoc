@@ -1,18 +1,19 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescalePodNotReady
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if a pod is **not** on `Ready` state
+* Este alerta será acionado se um pod **não** estiver no estado `Ready`
 
-== Troubleshooting
+== Solução de problemas
 
-* Execute a describe pod command to check the pod status 
+* Execute o comando `describe pod` para verificar o status do pod
 
-== Verification
+== Verificação
 
-* Alert should disappear once pod passes the readiness probe
+* O alerta deve desaparecer assim que o pod passar pela etapa de validação do _readiness_

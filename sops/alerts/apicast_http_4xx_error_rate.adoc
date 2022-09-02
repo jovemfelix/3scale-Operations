@@ -1,24 +1,25 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleApicastHttp4xxErrorRate
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if the error rate of `apicast-staging`/`apicast-production` HTTP 4XX requests is greater than a given threshold
+* Este alerta será acionado se a taxa de erro de solicitações HTTP 4XX de `apicast-staging`/`apicast-production` for maior que um determinado limite
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if `apicast-staging`/`apicast-production` pods might be failing
-* Check `apicast-staging`/`apicast-production` pod logs to see if:
-- Auth is not valid
-- Service/Mapping rule is not being found (either it does not exists in `system-app` or `system-app` is having issues and not returning the required configuration )
-- Upstream is sending a 4XX status code
-- Used policy is configured to send 4XX status code
+* Verifique se os pods `apicast-staging`/`apicast-production` podem estar falhando
+* Verifique os logs do pod `apicast-staging`/`apicast-production` para ver se:
+- A autenticação não é válida
+- A regra de serviço/mapeamento não está sendo encontrada (ou não existe no `system-app` ou o `system-app` está com problemas e não retorna a configuração necessária)
+- Upstream está enviando um código de status 4XX
+- A política usada está configurada para enviar o código de status 4XX
 
 
-== Verification
+== Verificação
 
-* Alert should disappear once the error rate of `apicast-staging`/`apicast-production` HTTP 4XX requests is below the threshold
+* O alerta deve desaparecer quando a taxa de erro das solicitações HTTP 4XX `apicast-staging`/`apicast-production` estiver abaixo do limite

@@ -1,19 +1,20 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescaleReplicationControllerReplicasMismatch
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert will trigger if a `ReplicationController` does not have the desired number of pods running
+* Este alerta será acionado se um `ReplicationController` não tiver o número desejado de pods em execução
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if the new pods created by the replicaset might be failing
-* Check if there might be an issue with the scheduling due to lack of nodes resources or tolerations
+* Verifique se os novos pods criados pelo _replicaset_ podem estar falhando
+* Verifique se pode haver um problema com o agendamento devido à falta de recursos ou tolerâncias de nós
 
-== Verification
+== Verificação
 
-* Alert should disappear once all pods are running per `ReplicationController` (running pods = desired pods)
+* O alerta deve desaparecer quando todos os pods estiverem sendo executados por `ReplicationController` (pods em execução = pods desejados)

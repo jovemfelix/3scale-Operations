@@ -1,21 +1,22 @@
 :toc:
+:toc-title: Índice
 :toc-placement!:
 
 = ThreescalePrometheusJobDown
 
 toc::[]
 
-== Description
+== Descrição
 
-* This alert willl trigger when a prometheus Job is Down, because `ServiceMonitor`/`PodMonitor` might have issues to scrape the application `Service`/`Pods`
-* This alert is important because if you have alerts based on application metrics that cannot be obtained because its associated prometheus job is failing you will lose visibility of the application
+* Este alerta será acionado quando um _job_ do _prometheus_ estiver inativo, porque `ServiceMonitor`/`PodMonitor` pode ter problemas para conectar com o aplicativo `Service`/`Pods`
+* Este alerta é importante porque se você tiver alertas baseados em métricas do aplicativo que não podem ser obtidos porque o trabalho do _prometheus_ associado está falhando, você perderá a visibilidade do aplicativo
 
-== Troubleshooting
+== Solução de problemas
 
-* Check if the scrapped application (or app metrics endpoint) might be failing and the scrape can not be done
-* Check if `ServiceMonitor`/`PodMonitor` might be misconfigured pointing to incorrect label, port, path...
-* Check if prometheus is having some problems, or if prometheus has not reload its config with possible new `ServiceMonitor`/`PodMonitor`
+* Verifique se o aplicativo descartado (ou o endpoint de métricas do aplicativo) pode estar falhando e o conexão não pode ser feita
+* Verifique se o `ServiceMonitor`/`PodMonitor` pode estar mal configurado apontando para rótulo, porta, caminho incorreto...
+* Verifique se _prometheus_ está tendo algum problema, ou se _prometheus_ não recarregou sua configuração com um possível novo `ServiceMonitor`/`PodMonitor`
 
-== Verification
+== Verificação
 
-* Alert should disappear once prometheus target starts scrapping all pods
+* O alerta deve desaparecer assim que o alvo do Prometheus começar a conectar com todos os pods

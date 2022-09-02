@@ -1,26 +1,25 @@
-= 3scale Operations
+= Operacional com 3scale 
 
-This repository contains documentation and tools to help in the installation, operation, ongoing Maintenance and upgrade of an instance of 3scale API Management, whether you are deploying it in a *public cloud*, *private cloud* or *on-premises*.
+Este repositório contém documentação e ferramentas para ajudar na instalação, operação, manutenção contínua e atualização de uma instância do scale API Management, esteja você implantando em uma *nuvem pública*, *nuvem privada* ou *local*.
 
-This documentation assumes familiarity with the main components of the 3scale architecture. If you would like to learn more about them, please check their upstream repositories:
+Esta documentação pressupõe familiaridade com os principais componentes da arquitetura 3scale. Se você quiser saber mais sobre eles, verifique seus repositórios upstream:
 
 * link:https://github.com/3scale/apicast[apicast]
-* link:https://github.com/3scale/apisonator[apisonator (also known as "backend")]
-* link:https://github.com/3scale/porta[porta (also known as "system")]
+* link:https://github.com/3scale/apisonator[apisonator (conhecido como "backend")]
+* link:https://github.com/3scale/porta[porta (conhecido como "system")]
 * link:https://github.com/3scale/zync[zync]
 
-It also assumes that you are installing 3scale on link:https://www.openshift.com/[Red Hat OpenShift] using the link:https://github.com/3scale/3scale-operator[3scale Operator].
+Ele também assume que você está instalando o 3scale no link: https://www.openshift.com/[Red Hat OpenShift] usando o link: https://github.com/3scale/3scale-operator[3scale Operator].
 
-Sections will be added over time and updated when relevant changes are made in 3scale or
-specific platforms it runs on.
+As seções serão adicionadas ao longo do tempo e atualizadas quando forem feitas alterações relevantes no 3scale ou plataformas específicas em que é executado.
 
-== Architecture
+== Arquitetura
 
-image::images/3scale-architecture.png[3scale Architecture]
+image::images/3scale-architecture.png[Arquitetura do 3scale]
 
-== Operations
+== Operacionais
 
-Documents in this section describe typical operation procedures once you have your 3scale installation up and running:
+Os documentos nesta seção descrevem os procedimentos de operação típicos depois de ter sua instalação 3scale em funcionamento:
 
 * link:docs/components.adoc[Components responsibilities and impact when down]
 * link:docs/backups.adoc[Backup & Restore procedures]

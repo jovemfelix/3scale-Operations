@@ -1,11 +1,11 @@
-= SOPS (Standard Operating Procedures)
+= POP (Procedimentos Operacionais Padrão)
 
-For each alert defined, there should be some associated documentation that explains what the alert means, what the likely cause is and how to respond to the alert. These SOPs are essential to enabling an SRE team to effectively respond to alerts without needing direct input from an Engineering team. Without these, an SRE team will be aware that there is an ongoing problem, but will not have the necessary knowledge to deal with the problem.
+Para cada alerta definido, deve haver alguma documentação associada que explique o que o alerta significa, qual é a causa provável e como responder ao alerta. Esses POP's são essenciais para permitir que uma equipe de SRE responda efetivamente aos alertas sem precisar de entrada direta de uma equipe de engenharia. Sem isso, uma equipe de SRE estará ciente de que há um problema contínuo, mas não terá o conhecimento necessário para lidar com o problema.
 
-Common sections in a SOP may include:
+Seções comuns existentes em um POP:
 
-* Assumptions - how to validate that the alert is actually highlighting a problem, and what prerequisites might be required
-* Reference Articles - where to find additional information, or prior art for linked/similar issues
-* Corrective Process - what steps to take to resolve the issue
-* Success Indicators - how to know when the issue is resolved
-* Other Notes - any other relevant information
+* Suposições - como validar se o alerta está realmente destacando um problema e quais pré-requisitos podem ser necessários
+* Artigos de referência - onde encontrar informações adicionais ou técnica anterior para questões vinculadas/semelhantes
+* Processo Corretivo - quais etapas tomar para resolver o problema
+* Indicadores de sucesso - como saber quando o problema foi resolvido
+* Outras Notas - qualquer outra informação relevante
