@@ -1,4 +1,4 @@
-= POP (Procedimentos Operacionais Padrão)
+= POP (Procedimento Operacional Padrão)
 
 Para cada alerta definido, deve haver alguma documentação associada que explique o que o alerta significa, qual é a causa provável e como responder ao alerta. Esses POP's são essenciais para permitir que uma equipe de SRE responda efetivamente aos alertas sem precisar de entrada direta de uma equipe de engenharia. Sem isso, uma equipe de SRE estará ciente de que há um problema contínuo, mas não terá o conhecimento necessário para lidar com o problema.
 
